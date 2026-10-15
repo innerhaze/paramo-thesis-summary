@@ -40,7 +40,7 @@ This study provides a recent historical perspective aimed at better understandin
 
 ------------------------------------------------------------------------
 
-**Note**: *The titles of key methodological sections include links that direct to GitHub repositories with the codes used and more detailed explanations for each section. To review the complete process of this study, excluding the phylogenetic reconstruction, visit the following [link.](https://innerhaze.github.io/Evolutionary-Divergence-Historical-Connectivity-in-Northern-Andean-Paramos-Pleistocene-/)*
+**Note**: *The titles of key methodological sections include links that direct to GitHub repositories with the codes used and more detailed explanations for each section. To review the complete process of this study, excluding the phylogenetic reconstruction, visit the following [link.](https://innerhaze.github.io/paramo-evolutionary-divergence/)*
 
 ------------------------------------------------------------------------
 
@@ -66,13 +66,13 @@ The study began with the development of geographic connectivity models, based on
 
 1.  <div>
 
-    > [**Development of the Movement Cost Matrix:**](https://github.com/innerhaze/DEM-Reclassification-R-Paramo-Connectivity-Modeling) A cost raster was constructed using a Digital Elevation Model (DEM) encompassing all páramo areas in the northern Andes. Specific movement costs were assigned to different altitudinal zones, reflecting the limited dispersal capacity of páramo organisms. The movement cost gradually increases as one moves away from the páramo core, reflecting the difficulties faced by species when dispersing between isolated fragments.
+    > [**Development of the Movement Cost Matrix:**](https://github.com/innerhaze/dem-reclass-paramo) A cost raster was constructed using a Digital Elevation Model (DEM) encompassing all páramo areas in the northern Andes. Specific movement costs were assigned to different altitudinal zones, reflecting the limited dispersal capacity of páramo organisms. The movement cost gradually increases as one moves away from the páramo core, reflecting the difficulties faced by species when dispersing between isolated fragments.
 
     <div>
 
 2.  <div>
 
-    > [**Calculation of Connectivity Metrics:**](https://github.com/innerhaze/Java-R-Integration-with-Graphab-Cost-Surface-Processing-and-Data-Management) Using the Graphab software, various connectivity metrics were calculated, including Least-Cost Distance (LCD) and the Current Flow (CF) index. These metrics were determined for 19 distinct páramo configurations, derived from the Pleistocene climatic fluctuations according to the Flantua et al. (2019) model. These calculations are crucial for understanding how climatic fluctuations influenced connectivity between the patches representing the distribution of each species included in the Espeletiinae phylogeny developed by Diazgranados and Barber (2017).
+    > [**Calculation of Connectivity Metrics:**](https://github.com/innerhaze/graphab-r-java-automation) Using the Graphab software, various connectivity metrics were calculated, including Least-Cost Distance (LCD) and the Current Flow (CF) index. These metrics were determined for 19 distinct páramo configurations, derived from the Pleistocene climatic fluctuations according to the Flantua et al. (2019) model. These calculations are crucial for understanding how climatic fluctuations influenced connectivity between the patches representing the distribution of each species included in the Espeletiinae phylogeny developed by Diazgranados and Barber (2017).
 
     <div>
 
@@ -86,13 +86,13 @@ With the connectivity models established, we proceeded to construct an ultrametr
 
 ### **2.3 Historical Connectivity Algorithm**
 
-An algorithm developed in R was used to integrate the information from the connectivity models and the phylogeny. This algorithm weights connectivity metrics based on the duration of each páramo configuration during the time interval between parent and child nodes in the phylogeny. This interval is selected to represent the period during which, hypothetically, the Pleistocene climatic fluctuations would have influenced connectivity, increasing or decreasing isolation between species. Once these key times were established, the algorithm queries the Flantua et al. (2019) paleoclimatic model database to obtain the páramo configurations and their duration during these intervals. With this information, a weighted average is calculated that reflects historical connectivity for each pair of phylogenetic combinations, ensuring that the critical divergence periods between species are appropriately considered in the analysis, provided these times do not exceed 2.2 million years, the time range covered by the paleoclimatic model. Visit the following [link](https://github.com/innerhaze/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene) for more details.
+An algorithm developed in R was used to integrate the information from the connectivity models and the phylogeny. This algorithm weights connectivity metrics based on the duration of each páramo configuration during the time interval between parent and child nodes in the phylogeny. This interval is selected to represent the period during which, hypothetically, the Pleistocene climatic fluctuations would have influenced connectivity, increasing or decreasing isolation between species. Once these key times were established, the algorithm queries the Flantua et al. (2019) paleoclimatic model database to obtain the páramo configurations and their duration during these intervals. With this information, a weighted average is calculated that reflects historical connectivity for each pair of phylogenetic combinations, ensuring that the critical divergence periods between species are appropriately considered in the analysis, provided these times do not exceed 2.2 million years, the time range covered by the paleoclimatic model. Visit the following [link](https://github.com/innerhaze/paramo-connectivity-algorithm) for more details.
 
 ------------------------------------------------------------------------
 
 ### **2.4 Generalized Dissimilarity Model (GDM)**
 
-After generating the historical connectivity data from the designed algorithm, a Generalized Dissimilarity Model (GDM) was used to assess the relationship between historical connectivity and evolutionary divergence in Espeletiinae. The GDM allowed us to analyze how the historical connectivity metrics, calculated based on páramo configurations during the Pleistocene, correlate with the evolutionary distances between lineages. Visit the following [link](https://github.com/innerhaze/Generalized-Dissimilarity-Modeling-for-Evolutionary-Divergence-and-Historical-Connectivity-Analysis) for more details.
+After generating the historical connectivity data from the designed algorithm, a Generalized Dissimilarity Model (GDM) was used to assess the relationship between historical connectivity and evolutionary divergence in Espeletiinae. The GDM allowed us to analyze how the historical connectivity metrics, calculated based on páramo configurations during the Pleistocene, correlate with the evolutionary distances between lineages. Visit the following [link](https://github.com/innerhaze/gdm-connectivity-paramo) for more details.
 
 ------------------------------------------------------------------------
 
@@ -108,7 +108,7 @@ Below are some issues and challenges to address within the methodological aspect
 
 1.  <div>
 
-    > **Temporal occurrence data:** The occurrence of each lineage in the landscape is based on current data. Therefore, connectivity calculations are made based on the present distribution, as no precise information is available on the historical location of these organisms. This is clearly illustrated in figure 2 of this [link](https://innerhaze.github.io/R-Algorithm-for-Historical-Connectivity-Analysis-of-Paramo-Lineages-in-the-Pleistocene/)
+    > **Temporal occurrence data:** The occurrence of each lineage in the landscape is based on current data. Therefore, connectivity calculations are made based on the present distribution, as no precise information is available on the historical location of these organisms. This is clearly illustrated in figure 2 of this [link](https://innerhaze.github.io/paramo-connectivity-algorithm/)
 
     <div>
 
